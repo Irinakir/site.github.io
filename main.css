@@ -6,7 +6,7 @@ body{
   color: #fff; /* Цвет текста */
   grid-template-columns: 1fr ;
   grid-template-rows: min-content min-content min-content min-content 1fr;
-  grid-template-areas: "top_words" "top_words"
+  grid-template-areas: "top_words" "top_words" 
       "logotip"
       "middle_words"
       "last_words"
@@ -33,7 +33,7 @@ body{
     padding:0;
   marging:0;
 }
-
+ 
 .menu-start{
   display: block;
   position: relative;
@@ -170,11 +170,11 @@ ul{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: stretch;
+  align-items: stretch; 
 }
 
 .menu-list {
-
+ 
   /*  transform: translateY(140%);*/
  transform: translateX(300%);
   /* transform: scale(-1);*/
@@ -197,7 +197,7 @@ a{
 
 .menu-icon.closed + .menu-list
 {
-  transform: translateX(0);
+  transform: translateX(0); 
 }
 
 .menu-list__item{
@@ -218,7 +218,7 @@ a{
   background: black;
   width: 100%;
   visibility: hidden;
-  font-size: 19px;
+  font-size: 19px; 
  }
 
 
@@ -236,7 +236,7 @@ a{
   visibility: visible;
   }
 
-ul.submenu-list{
+ul.submenu-list{   
     background-color: white;
     border: 1px solid black;
 }
