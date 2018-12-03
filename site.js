@@ -1,2 +1,5 @@
-var name = prompt("Как Ваше имя?", "");
-alert(name);
+var menuIcon = document.querySelector('.menu-icon');
+
+menuIcon.addEventListener('click', function() {
+  menuIcon.classList.toggle('closed');
+});
