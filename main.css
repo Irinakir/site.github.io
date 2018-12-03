@@ -1,0 +1,247 @@
+body{
+  display: grid;
+  margin: 0;
+  padding: 50px ;
+  background: lightblue url(https://www.motto.net.ua/pic/201505/1920x1200/motto.net.ua-95778.jpg); /* Цвет фона и путь к файлу */
+  color: #fff; /* Цвет текста */
+  grid-template-columns: 1fr ;
+  grid-template-rows: min-content min-content min-content min-content 1fr;
+  grid-template-areas: "top_words" "top_words"
+      "logotip"
+      "middle_words"
+      "last_words"
+      "bottom";
+  width: 90%;
+  font-size: 26px;
+/*  min-height: 100vh;*/
+  overflow-x: hidden;
+}
+
+.background {
+    background-image: url(your/image/here.jpg);
+    opacity: 0.4;
+}
+.top_words-left{
+  padding:15px;
+}
+
+.top_words{
+  grid-area: top_words;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+    padding:0;
+  marging:0;
+}
+
+.menu-start{
+  display: block;
+  position: relative;
+  padding:0;
+  marging:0;
+ }
+
+.logotip{
+  grid-area: logotip;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+}
+
+ .middle_words{
+  grid-area: middle_words;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-size: 2.5em;
+  padding:0 0 50px 0;
+  font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+ }
+
+ .last_words{
+   grid-area: last_words;
+   justify-content: center;
+   display: flex;
+   text-align: center;
+   font-size: 1.5em;
+   padding:0 0 50px 0;
+   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+ }
+
+.actions{
+  grid-area: bottom;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  width:1fr;
+  padding:5px;
+}
+
+.button{
+  grid-area: button;
+  border-radius: 15px ;
+  text-align: center;
+  justify-content: space-between;
+  align-items:stretch;
+  background:lightblue;
+  padding:5px 50px;
+}
+
+ul{
+	list-style-type: none;
+	}
+
+ .button:hover:enabled{
+    background: silver;
+  }
+
+.button:active:enabled{
+    background: blue;
+}
+
+@media (max-width: 320px){
+  .logotip
+  {
+    width: 50%;
+    height: auto;
+  }
+  .middle_words{
+ font-size: 1em;
+ padding:0;
+  }
+}
+
+.menu-icon{
+  width: 40px;
+  height: 40px;
+  stroke: white;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+
+.menu-icon__line-top{
+  transform-origin: 50% 10%;
+  transform: translateY(0) rotate(0deg);
+  transition: transform 0.8s ease-in 0s;
+}
+
+.menu-icon__line-middle{
+  opacity: 1;
+  transition: opacity 0.8s ease-in 0s;
+}
+
+.menu-icon__line-bottom{
+  transform: translateY(0) rotate(0deg);
+  transition: transform 0.8s ease-in 0s;
+  transform-origin: 50% 90%;
+}
+
+/* .menu-icon:hover .menu-icon__line-top, */
+.menu-icon.closed .menu-icon__line-top
+{
+  transform: translateY(40%) rotate(45deg);
+}
+
+/* .menu-icon:hover .menu-icon__line-bottom, */
+.menu-icon.closed .menu-icon__line-bottom
+{
+  transform: translateY(-40%) rotate(-45deg);
+}
+
+/* .menu-icon:hover .menu-icon__line-middle, */
+.menu-icon.closed .menu-icon__line-middle
+{
+  opacity: 0;
+}
+
+.menu-list{
+  background: black;
+  position: absolute;
+  margin: 0 0 0 0;
+  padding: 0;
+  list-style: none;
+  top: 54px;
+/*  top:-350px;*/
+  left:0;
+  right:0;
+  width: 100%;
+  /*height: calc(100vh - 145px);*/
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.menu-list {
+
+  /*  transform: translateY(140%);*/
+ transform: translateX(300%);
+  /* transform: scale(-1);*/
+  transition: transform .8s cubic-bezier(.17,.45,.73,.79) 0s;
+}
+
+.menu-list__item
+{
+  color: #fff;
+  font-size: 1em;
+  font-weight: normal;
+  padding: 0 20px;
+  margin: 5px 0;
+}
+
+a{
+    text-decoration:none;
+    color:#fff;
+}
+
+.menu-icon.closed + .menu-list
+{
+  transform: translateX(0);
+}
+
+.menu-list__item{
+  position: relative;
+}
+
+.menu-list__item:focus{
+  outline: none;
+}
+
+.submenu-list{
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  top: 0;
+  left: -120px;
+  background: black;
+  width: 100%;
+  visibility: hidden;
+  font-size: 19px;
+ }
+
+
+.menu-list__item:focus,
+.menu-list__item:hover,
+.menu-list__item:focus a,
+.menu-list__item:hover a{
+  background: silver;
+  color:red;
+}
+
+
+.menu-list__item:focus .submenu-list,
+.menu-list__item:hover .submenu-list{
+  visibility: visible;
+  }
+
+ul.submenu-list{
+    background-color: white;
+    border: 1px solid black;
+}
+
+ul.submenu-list > li > a:hover,
+ul.submenu-list > li > a:focus{
+  color: red !important;
+}
