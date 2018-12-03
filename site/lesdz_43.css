@@ -1,0 +1,114 @@
+body{
+  display: grid;
+  margin: 0;
+  padding: 120px ;
+  background: lightblue url(http://bgfons.com/uploads/clouds/clouds_texture6147.jpg); /* Цвет фона и путь к файлу */
+  color: #fff; /* Цвет текста */
+  grid-template-columns: 1fr ;
+  grid-template-rows: min-content 1fr min-content;
+  grid-template-areas: "photos"
+      "links"
+      "button";
+  width: 80%;
+/*  min-height: 100vh;*/
+}
+
+.photos{
+  grid-area: photos;
+ background: lightblue url(https://www.sunhome.ru/i/wallpapers/135/razmitie-krugi.1920x1080.jpg); /* Цвет фона и путь к файлу */
+ display: flex;
+ align-items: center;
+ justify-content: stretch;
+ border-radius: 15px 15px 0 0 ;
+ }
+
+.photos .photos-logo{
+  padding:70px;
+ }
+
+.photos-logo-ad{
+  align-items: center;
+  flex-direction: column;
+  justify-content: stretch;
+  text-align: justify;
+  color:#fff;
+}
+
+.photos-logo-name{
+  font-size: 3.5em;
+}
+
+.photos-logo-login{
+  font-size: 1.3em;
+}
+
+.links{
+  grid-area: links;
+  background: white;
+  display: flex;
+  Justify-content: center;
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  align-items:center;
+  }
+
+.links .links_nav{
+  flex: 0 0 auto;
+  background: lightblue;
+  color: #fff;
+  width:25%;
+  border-radius: 9px;
+  margin:10px 30px;
+  text-align: center;
+  padding:70px 0;
+}
+
+
+.links .links_nav:hover,
+.links .links_nav:focus{
+  background: blue;
+  outline: none;
+
+}
+
+.button{
+  grid-area: button;
+  border-radius:0 0 15px 15px ;
+  text-align: center;
+  justify-content: space-between;
+  align-items:stretch;
+  background:lightblue;
+  padding:5px 50px;
+}
+.button-follow{
+  background: #fff;
+  border-radius: 5px;
+  border: 1px solid blue;
+  color: blue;
+  width:1fr;
+  padding:5px;
+}
+.button-follow:hover:enabled{
+  background: yellow;
+}
+.button-follow:active:enabled{
+  background: orange;
+}
+.button-follow[disabled]:hover{
+  background: red;
+}
+
+@media (max-width: 320px)
+{
+  .button-follow{
+    padding:2px 10px;
+  }
+  .links .links_nav{
+    margin:10px 10px;
+    padding:10px 0;
+  }
+  .links{
+      font-size: 0.8em;
+  }
+}
