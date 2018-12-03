@@ -3,23 +3,41 @@
 <meta charset="utf-8">
 <title>Кириллова Ирина</title>
 <body>
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="/site/main.css">
 <div class="top_words">
    <div class="top_words-left">
       RETROSPECT
     </div>
     <li class="top_words-right">
-      <a class="top_words-right-link">
-      <svg class="top_words-right-icon" viewBox="0 0 24 24" role="image" aria-label="MENU">
-        <path d="M10,4V8H14V4H10M16,4V8H20V4H16M16,10V14H20V10H16M16,16V20H20V16H16M14,20V16H10V20H14M8,20V16H4V20H8M8,14V10H4V14H8M8,8V4H4V8H8M10,14H14V10H10V14M4,2H20A2,2 0 0,1 22,4V20A2,2 0 0,1 20,22H4C2.92,22 2,21.1 2,20V4A2,2 0 0,1 4,2Z"></path>
-        </svg>
-
-       <span class="top_words-right-title">MENU</span>
-     </a>
+   <div class="menu-start">MENU
+  <svg viewbox="0 0 20 20" class="menu-icon closed" tabindex="0">
+    <line class="menu-icon__line-top" x1="2" y1="2" x2="18" y2="2"/>
+    <line class="menu-icon__line-middle" x1="2" y1="10" x2="18" y2="10"/>
+    <line class="menu-icon__line-bottom" x1="2" y1="18" x2="18" y2="18"/>
+  </svg>
+  <ul class="menu-list">
+    <li class="menu-list__item" tabindex="0"><a href="index.html">Home</a>
+    </li>
+    <li class="menu-list__item" tabindex="0"> <a href="curriculum_vitae.html" target="_blank"> CV</a> 
+    </li>
+    <li class="menu-list__item" tabindex="0">
+      Мои дз
+      <ul class="submenu-list">
+        <li tabindex="0"><a href="lesdz_43.html" target="_blank" style="color:black;">Дом. задание 1</a> </li>
+        <li tabindex="0"><a href="lesdz_43.html" target="_blank"style="color:black;">Дом. задание 2</a></li>
+        <li tabindex="0"><a href="lesdz_43.html" target="_blank" style="color:black;">Дом. задание 3</a></li>             
+    </ul>
+    
+    
+    </li>
+    
+  </ul>
+</div>
+     
    </li>
 </div>
 <!--
-<script src="site.js">
+<script src="/site/site.js">
     var name = prompt("Ваше имя?", "");
     prompt( name );
 </script>
@@ -37,15 +55,6 @@
 <ul class="actions">
 		<li><a href="#" class="button">Learn More</a></li>
 </ul>
-
-<nav id="nav" class="nav">
-				<ul class="links">
-					<li><a href="index.html">Home</a></li>
-					<li><a href="curriculum_vitae.html" target="_blank">CV</a></li>
-					<li><a href="lesdz_43.html">Дом. задание</a></li>
-				</ul>
-</nav>
-
 </body>
 </head>
 </html>
