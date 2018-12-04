@@ -14,7 +14,7 @@ body{
   width: 90%;
   font-size: 26px;
 /*  min-height: 100vh;*/
-/*   overflow-x: hidden;*/
+
 }
 
 .background {
@@ -172,7 +172,6 @@ ul{
   justify-content: center;
   align-items: stretch; 
 	
-   opacity:0;	
 }
 
 .menu-list {
@@ -199,7 +198,7 @@ a{
 
 .menu-icon.closed + .menu-list
 {
-	opacity:1;
+
   transform: translateX(0); 
 }
 
