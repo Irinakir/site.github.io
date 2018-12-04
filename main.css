@@ -17,6 +17,10 @@ body{
 /*  overflow-x: hidden;*/
 }
 
+* {
+box-sizing: border-box;
+}
+
 .background {
     background-image: url(your/image/here.jpg);
     opacity: 0.4;
