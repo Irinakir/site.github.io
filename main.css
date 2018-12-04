@@ -21,6 +21,11 @@ body{
 box-sizing: border-box;
 }
 
+.logotip-img{
+  width:350px;
+  height: 350px;
+}
+
 .background {
     background-image: url(your/image/here.jpg);
     opacity: 0.4;
