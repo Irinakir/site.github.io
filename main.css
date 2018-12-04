@@ -14,7 +14,7 @@ body{
   width: 90%;
   font-size: 26px;
 /*  min-height: 100vh;*/
-  overflow-x: hidden;
+/*  overflow-x: hidden;*/
 }
 
 .background {
@@ -171,12 +171,13 @@ ul{
   flex-direction: column;
   justify-content: center;
   align-items: stretch;
+	opacity:0;
 }
 
 .menu-list {
 
   /*  transform: translateY(140%);*/
- transform: translateX(300%);
+ transform: translateX(70%);
   /* transform: scale(-1);*/
   transition: transform .8s cubic-bezier(.17,.45,.73,.79) 0s;
 }
@@ -197,6 +198,7 @@ a{
 
 .menu-icon.closed + .menu-list
 {
+	opacity:1;
   transform: translateX(0);
 }
 
