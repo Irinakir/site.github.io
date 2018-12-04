@@ -1,7 +1,7 @@
 body{
   display: grid;
   margin: 0;
-  padding: 80px ;
+  padding: 50px ;
   background: lightblue url(https://www.motto.net.ua/pic/201505/1920x1200/motto.net.ua-95778.jpg); /* Цвет фона и путь к файлу */
   color: #fff; /* Цвет текста */
   grid-template-columns: 1fr ;
@@ -86,7 +86,7 @@ box-sizing: border-box;
   padding:5px;
 }
 
-.button{
+#button{
   grid-area: button;
   border-radius: 15px ;
   text-align: center;
@@ -94,18 +94,22 @@ box-sizing: border-box;
   align-items:stretch;
   background:lightblue;
   padding:5px 50px;
+  color: navy;
+    
 }
+
 
 ul{
 	list-style-type: none;
 	}
 
- .button:hover:enabled{
+ #button:hover:enabled{
     background: silver;
   }
 
-.button:active:enabled{
+#button:active:enabled{
     background: blue;
+  color: white;
 }
 
 @media (max-width: 320px){
