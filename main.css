@@ -2,7 +2,7 @@ body{
   display: grid;
   margin: 0;
   padding: 50px ;
-  background: lightblue url(https://www.motto.net.ua/pic/201505/1920x1200/motto.net.ua-95778.jpg); /* Цвет фона и путь к файлу */
+  background: linear-gradient(#3d3d29, #8a8a5c); url(https://www.motto.net.ua/pic/201505/1920x1200/motto.net.ua-95778.jpg); /* Цвет фона и путь к файлу */
   color: #fff; /* Цвет текста */
   grid-template-columns: 1fr ;
   grid-template-rows: min-content min-content min-content min-content 1fr;
