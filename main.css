@@ -2,7 +2,7 @@ body{
   display: grid;
   margin: 0;
   padding: 50px ;
-  background: linear-gradient(#3d3d29, #8a8a5c); url(zvezdnoe.jpg); /* Цвет фона и путь к файлу */
+  background: linear-gradient(#3d3d29, #8a8a5c); url(/zvezdnoe.jpg); /* Цвет фона и путь к файлу */
   color: #fff; /* Цвет текста */
   grid-template-columns: 1fr ;
   grid-template-rows: min-content min-content min-content min-content 1fr;
@@ -27,7 +27,7 @@ box-sizing: border-box;
 }
 
 .background {
-    background-image: url(your/image/here.jpg);
+    background-image: url(/here.jpg);
     opacity: 0.4;
 }
 .top_words-left{
